@@ -1,0 +1,9 @@
+<h1>Create new paste</h1>
+<form action = "" method = "POST">
+	{% csrf_token %}
+	<table>
+		{{ form_as_table }}
+	</table>
+	<input type = "submit" name = "create" value = "Create">
+</form>
+<a href = "{% url 'pastebin_paste_list'	%}">View All</a>
